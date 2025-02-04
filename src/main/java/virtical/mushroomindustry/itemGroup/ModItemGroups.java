@@ -9,15 +9,16 @@ import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import virtical.mushroomindustry.MushroomIndustry;
+import virtical.mushroomindustry.item.ModItems;
 
 public class ModItemGroups {
     public static final ItemGroup MUSHROOMS_GROUP = Registry.register(Registries.ITEM_GROUP,
             new Identifier(MushroomIndustry.MOD_ID, "mushrooms"),
             FabricItemGroup.builder()
                     .displayName(Text.translatable("itemGroup.mushroom-industry.mushrooms"))
-                    .icon(() -> new ItemStack(Items.BROWN_MUSHROOM))
+                    .icon(() -> new ItemStack(ModItems.GOLD_MUSHROOM))
                     .entries(((displayContext, entries) -> {
-                        entries.add(Items.BARRIER);
+                        entries.add(ModItems.GOLD_MUSHROOM);
                     })).build());
 
     public static void registerItemGroups() {
