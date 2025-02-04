@@ -3,6 +3,7 @@ package virtical.mushroomindustry;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import virtical.mushroomindustry.itemGroup.ModItemGroups;
 
 public class MushroomIndustry implements ModInitializer {
 	public static final String MOD_ID = "mushroom-industry";
@@ -10,6 +11,6 @@ public class MushroomIndustry implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-
+		ModItemGroups.registerItemGroups();
 	}
 }
